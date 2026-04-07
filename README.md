@@ -3,11 +3,33 @@ Scripts for mouse anaesthesia emergence analysis. Supporting Moreno-Gomez M et a
 
 =================================================================================================================================================================
 
+## Automated Anaesthesia Induction Analysis (LBM Detection)
 
+### Overview
+This component of the pipeline is designed to quantify the transition from a wakeful state to isoflurane-induced anaesthesia. It identifies the **Last Body Movement (LBM)**, defined as the final instance of voluntary motor activity (torso or head) before complete cessation of movement.
+
+### Key Features
+* **Dynamic Thresholding**: Implements a sensitive detection threshold based on the animal's session-specific velocity (Mean + 3.0 Standard Deviations).
+* **Hierarchical Logic**: Movement is primarily anchored to the Head Centre and Tail Base. Body Centre displacement is validated only when accompanied by these anchor points to prevent tracking noise from triggering false movements.
+* **Induction Window**: The analysis focuses specifically on the window following the start of isoflurane administration (from 120s to 540s).
+
+### Output
+The script generates a `Induction_LBM_3SD_Summary.xlsx` file containing:
+1. **Chosen_LBM_sec**: The exact timestamp of the last voluntary movement.
+2. **Body Part Statistics**: Mean speed, Standard Deviation, and the applied threshold for all 10 anatomical labels.
+
+## Requirements
+- MATLAB (R2018a+)
+- Statistics and Machine Learning Toolbox
+- DeepLabCut output (.h5)
+
+### Reference
+This analysis follows the methodology described in:
+Moreno-Gomez et al. (2026). [cite_start]*Off-target effects of DREADD ligands revealed by an anaesthesia emergence paradigm in mice*.
 
 
 ==================================================================================================================================================================
-# Anaesthesia Emergence Analysis Toolkit
+# Automated Anaesthesia Emergence Analysis (FBD Detection)
 
 This repository contains the MATLAB suite for analyzing mouse behavior during anaesthesia induction and emergence, as described in:
 > **Moreno-Gomez M et al.**, *"Off-target effects of DREADD ligands revealed by an anaesthesia emergence paradigm in mice"* (2026).
