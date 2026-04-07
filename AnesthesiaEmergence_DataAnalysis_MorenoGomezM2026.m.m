@@ -3,7 +3,7 @@
 % Script associated with: "Off-target effects of DREADD ligands revealed 
 % by an anaesthesia emergence paradigm in mice" (Moreno-Gomez et al., 2026)
 % 
-% Author: Miryam Moreno-Gómez.
+% Author: Miryam Moreno-GÃ³mez.
 % Date: April 2026
 % License: MIT
 %
@@ -15,7 +15,7 @@
 %
 % CITATION:
 % If you use this script in your research, please cite:
-% Moreno-Gómez, M. (2026). Behavioral Analysis Toolkit for FBDs. GitHub Repository.
+% Moreno-GÃ³mez, M. (2026). Behavioral Analysis Toolkit for FBDs. GitHub Repository.
 %
 % =========================================================================
 
