@@ -1,0 +1,28 @@
+# --- MATLAB Specific ---
+*.asv
+*.m~
+*.slx.autosave
+*.mex*
+*.p
+*.pcode
+*.mat
+*.fig
+node_modules/
+
+# --- Project Outputs (Created by your script) ---
+# This prevents uploading the heavy result folders to GitHub
+Plots_k*/
+Analysis_k*/
+Trajectories/
+*.xlsx
+*.csv
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE/Editor ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
